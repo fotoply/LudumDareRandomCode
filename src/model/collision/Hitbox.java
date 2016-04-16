@@ -21,7 +21,7 @@ public class Hitbox {
     }
 
     public void setOuterPerimeter(int x, int y, int radius) {
-        outerPerimeter = new model.collision.CircleHitNode(x, y, radius);
+        outerPerimeter = new model.collision.CircleHitNode(x, y, this,radius);
     }
 
     public void addNode(model.collision.HitNode node) {
@@ -39,6 +39,14 @@ public class Hitbox {
             }
         }
         return false;
+    }
+
+    public int getX() {
+        return parent.getX();
+    }
+
+    public int getY() {
+        return parent.getY();
     }
 
 }

@@ -1,5 +1,4 @@
-import model.Collideable;
-import model.Hitbox;
+import model.Entity;
 import model.collision.Collideable;
 import model.collision.Hitbox;
 
@@ -8,7 +7,7 @@ import model.collision.Hitbox;
  *
  * @author Niels Norberg
  */
-public class RandomObject implements Collideable {
+public class RandomObject extends Entity implements Collideable {
     private Hitbox hitbox;
 
     @Override
@@ -17,7 +16,7 @@ public class RandomObject implements Collideable {
     }
 
     public RandomObject() {
-        this.hitbox = new Hitbox();
+        this.hitbox = new Hitbox(this);
         hitbox.setOuterPerimeter(0,0,2);
     }
 

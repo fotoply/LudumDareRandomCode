@@ -10,10 +10,12 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
  */
 public class CircleHitNode extends HitNode {
     private int radius;
+    private Hitbox parent;
 
-    public CircleHitNode(int x, int y, int radius) {
-        super(x, y);
+    public CircleHitNode(int x, int y, Hitbox parent, int radius) {
+        super(x, y, parent);
         this.radius = radius;
+        this.parent = parent;
     }
 
     public int getRadius() {
