@@ -1,4 +1,4 @@
-package collision;
+package model.collision;
 
 /**
  * Created 4/16/16

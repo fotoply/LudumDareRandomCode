@@ -1,5 +1,6 @@
-package collision;
+package model.collision;
 
+import model.collision.HitNode;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**

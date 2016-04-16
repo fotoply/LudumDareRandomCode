@@ -1,0 +1,20 @@
+package model;
+
+/**
+ * Created 4/16/16
+ *
+ * @author Niels Norberg
+ */
+public class Entity {
+
+    private int x;
+    private int y;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+}
