@@ -14,7 +14,6 @@ public abstract class HitNode {
         this.x = x;
         this.y = y;
     }
-
     public abstract boolean intersects(HitNode otherNode);
 
     public int getX() {
