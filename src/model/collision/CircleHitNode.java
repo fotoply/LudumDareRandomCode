@@ -24,12 +24,12 @@ public class CircleHitNode extends HitNode {
 
     @Override
     public boolean intersects(HitNode otherNode) {
+        return intersects(otherNode, true);
+    }
+
+    public boolean intersects(HitNode otherNode, boolean shouldReverse) {
         if(otherNode instanceof CircleHitNode) {
-            if(Math.hypot(this.getX()-otherNode.getX(),this.getY()-otherNode.getY()) < this.getRadius() + ((CircleHitNode) otherNode).getRadius()) {
-                return true;
-            } else {
-                return false;
-            }
+            return Math.hypot(this.getX()-otherNode.getX(),this.getY()-otherNode.getY()) < this.getRadius() + ((CircleHitNode) otherNode).getRadius();
         } else {
             throw new NotImplementedException();
         }
