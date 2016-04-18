@@ -30,7 +30,7 @@ public class SquareHitNode extends HitNode {
         if(otherNode instanceof SquareHitNode) {
             return squaresIntersect(this, (SquareHitNode) otherNode);
         } else if(otherNode instanceof  CircleHitNode) {
-
+            return squareCircleIntersect(this, (CircleHitNode) otherNode);
         } else if(shouldReverse) { //Must always be the last else-if, only followed by the else
             return otherNode.intersects(this, false);
         } else {
@@ -45,6 +45,11 @@ public class SquareHitNode extends HitNode {
                 thisNode.bottomEdge > otherNode.getY()) {
             return false;
         }
+        return true;
+    }
+
+    private boolean squareCircleIntersect(SquareHitNode thisNode, CircleHitNode otherNode) {
+
         return true;
     }
 }
