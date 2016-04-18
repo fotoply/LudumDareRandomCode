@@ -1,17 +1,16 @@
 package model.collision;
 
-import model.collision.HitNode;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
- * Created 4/16/16
+ * Created 4/18/16
  *
  * @author Niels Norberg
  */
-public class CircleHitNode extends HitNode {
+public class SquareHitNode extends HitNode {
     private int radius;
 
-    public CircleHitNode(int x, int y, Hitbox parent, int radius) {
+    public SquareHitNode(int x, int y, Hitbox parent, int radius) {
         super(x, y, parent);
         this.radius = radius;
     }
