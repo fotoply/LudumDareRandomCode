@@ -29,6 +29,8 @@ public class SquareHitNode extends HitNode {
     public boolean intersects(HitNode otherNode, boolean shouldReverse) {
         if(otherNode instanceof SquareHitNode) {
             return squaresIntersect(this, (SquareHitNode) otherNode);
+        } else if(otherNode instanceof  CircleHitNode) {
+
         } else if(shouldReverse) { //Must always be the last else-if, only followed by the else
             return otherNode.intersects(this, false);
         } else {
@@ -37,9 +39,9 @@ public class SquareHitNode extends HitNode {
     }
 
     private boolean squaresIntersect(SquareHitNode thisNode, SquareHitNode otherNode) {
-        if(thisNode.rightEdge < otherNode.getX() ||
-                thisNode.getX() > otherNode.rightEdge ||
-                thisNode.getY() < otherNode.bottomEdge ||
+        if(thisNode.rightEdge < otherNode.getX() &&
+                thisNode.getX() > otherNode.rightEdge &&
+                thisNode.getY() < otherNode.bottomEdge &&
                 thisNode.bottomEdge > otherNode.getY()) {
             return false;
         }
