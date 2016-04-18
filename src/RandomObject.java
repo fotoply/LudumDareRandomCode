@@ -22,6 +22,6 @@ public class RandomObject extends Entity implements Collideable {
 
     @Override
     public boolean collidesWith(Collideable otherCollideable) {
-        return false;
+        return
     }
 }
