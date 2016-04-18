@@ -16,6 +16,7 @@ public abstract class HitNode {
         this.y = y;
         this.parent = parent;
     }
+
     public abstract boolean intersects(HitNode otherNode);
 
     public abstract boolean intersects(HitNode otherNode, boolean shouldReverse);

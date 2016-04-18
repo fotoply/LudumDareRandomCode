@@ -1,6 +1,5 @@
 package model;
 
-import model.collision.HitNode;
 import model.collision.Hitbox;
 
 /**
@@ -39,6 +38,6 @@ public class Entity {
     }
 
     public boolean intersects(Entity otherObject) {
-         return otherObject.getHitbox().intersectsWith(this.getHitbox());
+        return otherObject.getHitbox().intersectsWith(this.getHitbox());
     }
 }

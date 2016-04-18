@@ -21,7 +21,7 @@ public class Hitbox {
     }
 
     public void setOuterPerimeter(int x, int y, int radius) {
-        outerPerimeter = new CircleHitNode(x, y, this,radius);
+        outerPerimeter = new CircleHitNode(x, y, this, radius);
     }
 
     public void addNode(HitNode node) {
@@ -29,7 +29,7 @@ public class Hitbox {
     }
 
     public boolean intersectsWith(Hitbox otherHitbox) {
-        if(this.outerPerimeter.intersects(otherHitbox.outerPerimeter)) {
+        if (this.outerPerimeter.intersects(otherHitbox.outerPerimeter)) {
             for (HitNode node : nodes) {
                 for (HitNode otherNode : otherHitbox.nodes) {
                     if (node.intersects(otherNode)) {
