@@ -11,8 +11,8 @@ import java.util.ArrayList;
  */
 public class Hitbox {
 
-    private ArrayList<model.collision.HitNode> nodes;
-    private model.collision.HitNode outerPerimeter;
+    private ArrayList<HitNode> nodes;
+    private HitNode outerPerimeter;
     private Entity parent;
 
     public Hitbox(Entity parent) {
@@ -21,17 +21,17 @@ public class Hitbox {
     }
 
     public void setOuterPerimeter(int x, int y, int radius) {
-        outerPerimeter = new model.collision.CircleHitNode(x, y, this,radius);
+        outerPerimeter = new CircleHitNode(x, y, this,radius);
     }
 
-    public void addNode(model.collision.HitNode node) {
+    public void addNode(HitNode node) {
         nodes.add(node);
     }
 
     public boolean intersectsWith(Hitbox otherHitbox) {
         if(this.outerPerimeter.intersects(otherHitbox.outerPerimeter)) {
-            for (model.collision.HitNode node : nodes) {
-                for (model.collision.HitNode otherNode : otherHitbox.nodes) {
+            for (HitNode node : nodes) {
+                for (HitNode otherNode : otherHitbox.nodes) {
                     if (node.intersects(otherNode)) {
                         return true;
                     }
