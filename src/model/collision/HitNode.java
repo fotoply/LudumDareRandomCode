@@ -18,6 +18,8 @@ public abstract class HitNode {
     }
     public abstract boolean intersects(HitNode otherNode);
 
+    public abstract boolean intersects(HitNode otherNode, boolean shouldReverse);
+
     public int getRelativeX() {
         return x;
     }
